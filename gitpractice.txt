@@ -1,0 +1,340 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+using namespace std;
+
+void winta();
+
+
+void rewda();
+void heaven();
+void grand();
+void  intro();
+
+struct name
+{
+    int a;
+    char b[10];
+
+};
+name A,B;
+int main()
+{
+    system ("color 5A");
+    int i;
+    system ("cls");
+    do {
+    system ("cls");
+    intro();
+    char choice;
+    cout<<"Enter Your Choice"<<endl;
+    cout<<"W/w for Winta Hotel\tR/r for Rewda Hotel\tH/h for Heaven Hotel\tG/g for Grand Gato"<<endl;
+    cin>>choice;
+    switch (choice) {
+	case 'W':
+	case 'w':
+	    	winta();
+				break;
+	case 'R':
+    case 'r':
+            rewda();
+				break;
+	case 'H':
+	case 'h':
+	    	heaven();
+				break;
+	case 'G':
+	case 'g':
+	    	grand();
+				break;
+	default:	cout << "Invalid Input: " << endl;
+				break;
+}
+    cout<<"Do you want to continue?"<<endl;
+    cout<<"If yes press 1; else press any other number."<<endl;
+    cin>>i;
+    }while (i==1);
+    return 0;
+}
+
+void  intro()
+{
+cout<<"Welcome to Harar Hotels Service Information Provider (HHSIP)\n";
+cout<<"=========================== +++ ==============================\n";
+cout<<"This Project is built by :-\n";
+        cout<<"     Group Members                        ID.\n";
+        cout<<"1. Abenezer Yohannis                     861/13\n";
+        cout<<"2. Getahun Tamirat                       421/12\n";
+        cout<<"3. Heaven Endris                         889/13\n";
+        cout<<"4. Kaleab Aytenfisu                      893/13\n";
+        cout<<"5. Niya Murad                            901/13\n";
+   cout<<" ==========================  +++ ===============================\n";
+
+}
+void winta()
+{
+    int x,y;
+   cout<<"welcome to Winta Hotel Home page"<<endl;
+   cout<<"please enter your choice service"<<endl;
+   cout<<"1.Food  "<<endl;
+   cout<<"2.Drink"<<endl;
+   cout<<"3.Bed room service"<<endl;
+   cout<<"4.Gym "<<endl;
+
+   cin>>x;
+   switch(x)
+   {
+ case 1:
+     {
+         cout<<"\t Food\t\t Price\n\tPizza\t\t120 birr\n\tBurger \t\t150 birr\n\tFruit punch\t60 birr\n\tSalad\t\t50 birr\n\tFinger fish\t80 birr"<<endl;
+         break;
+     }
+ case 2:
+    {
+        cout<<"\tDrink type\t\tPrice\n\tBeer\t\t\t30 birr\n\tSoft drink\t\t20 birr\n\tJuice\t\t\t40 birr"<<endl;
+        break;
+    }
+
+ case 3:
+    {
+        cout<<"\tBed type\tPrice\n\tFamily\t\t900 birr\n\tCouple\t\t700 birr\n\tSingle\t\t500 birr"<<endl;
+       break;
+    }
+ case 4:
+    {
+        cout<<"\n\tTime\t\t\tPrice\n\tPer Month\t\t400 birr\n\tPer week\t\t250 birr\n\tPer day\t\t\t100 birr"<<endl;
+        break;
+    }
+
+
+
+   }
+   cout<<"If you want to get a reservation Enter 1 \nIf you want exit enter 0 "<<endl;
+   cin>>y;//data type integer
+   switch(y){
+   case 1:
+       {
+   name A,B; // strcut
+   fstream outfile;
+    outfile.open("Winta_registration_info.txt",ios::out);
+    cout<<"\n\t\t\tWelcome to Registration Page";
+
+    cout<<"\n Please Enter your First  Name"<<endl;
+    cin>>A.b;
+    outfile<<A.b<<endl;
+    cout<<"\n Please Enter your Last Name"<<endl;
+    cin>>B.b;
+    outfile<<B.b<<endl;
+    cout<<"\n Please Enter your phone number"<<endl;
+    cin>>A.a;
+    outfile<<A.a<<endl;
+    cout<<"\n Thank you Mr or Ms "<<A.b<<" "<<B.b<<"\n You have successfully registered!"<<endl;
+
+    outfile.close();
+   }
+   case 0:
+    cout<<"\tTank you for Your Visit!!!"<<endl;
+
+   }
+}
+
+void rewda()
+{
+       int x,y;
+   cout<<"welcome to Rewda Hotel Home page"<<endl;
+   cout<<"please enter your choice service"<<endl;
+   cout<<"1.Food  "<<endl;
+   cout<<"2.Drink"<<endl;
+   cout<<"3.Conference Hall service"<<endl;
+   cout<<"4.Gym "<<endl;
+
+   cin>>x;
+   switch(x)
+   {
+ case 1:
+     {
+         cout<<"\t Food\t\t Price\n\tPizza\t\t120 birr\n\tBurger \t\t150 birr\n\tFruit punch\t60 birr\n\tSalad\t\t50 birr\n\tFinger fish\t80 birr"<<endl;
+         break;
+     }
+ case 2:
+    {
+        cout<<"\tDrink type\t\tPrice\n\tBeer\t\t\t30 birr\n\tSoft drink\t\t20 birr\n\tJuice\t\t\t40 birr"<<endl;
+        break;
+    }
+
+ case 3:
+    {
+        cout<<"\tService\tPrice\n\tWedding\t\t900 birr\n\tMeeting\t\t700 birr\n\tGraduation\t\t500 birr"<<endl;
+       break;
+    }
+ case 4:
+    {
+        cout<<"\n\tTime\t\t\tPrice\n\tPer Month\t\t400 birr\n\tPer week\t\t250 birr\n\tPer day\t\t\t100 birr"<<endl;
+        break;
+    }
+
+
+
+   }
+   cout<<"If you want to get a reservation Enter 1 \nIf you want exit enter 0 "<<endl;
+   cin>>y;//data type integer
+   switch(y){
+   case 1:
+       {
+   name A,B; // strcut
+   fstream outfile;
+    outfile.open("Rewda_registration_info.txt",ios::out);
+    cout<<"\n\t\t\tWelcome to Registration Page";
+
+    cout<<"\n Please Enter your First  Name"<<endl;
+    cin>>A.b;
+    outfile<<A.b<<endl;
+    cout<<"\n Please Enter your Last Name"<<endl;
+    cin>>B.b;
+    outfile<<B.b<<endl;
+    cout<<"\n Please Enter your phone number"<<endl;
+    cin>>A.a;
+    outfile<<A.a<<endl;
+    cout<<"\n Thank you Mr or Ms "<<A.b<<" "<<B.b<<"\n You have successfully registered!"<<endl;
+
+    outfile.close();
+   }
+   case 0:
+    cout<<"\tTank you for Your Visit!!!"<<endl;
+
+   }
+}
+
+void heaven()
+{
+       int x,y;
+   cout<<"welcome to Heaven Hotel Home page"<<endl;
+   cout<<"please enter your choice service"<<endl;
+   cout<<"1.Food  "<<endl;
+   cout<<"2.Drink"<<endl;
+   cout<<"3.Conference Hall service"<<endl;
+   cout<<"4.Guest House "<<endl;
+
+   cin>>x;
+   switch(x)
+   {
+ case 1:
+     {
+         cout<<"\t Food\t\t Price\n\tPizza\t\t120 birr\n\tBurger \t\t150 birr\n\tFruit punch\t60 birr\n\tSalad\t\t50 birr\n\tFinger fish\t80 birr"<<endl;
+         break;
+     }
+ case 2:
+    {
+        cout<<"\tDrink type\t\tPrice\n\tBeer\t\t\t30 birr\n\tSoft drink\t\t20 birr\n\tJuice\t\t\t40 birr"<<endl;
+        break;
+    }
+
+ case 3:
+    {
+        cout<<"\tService\tPrice\n\tWedding\t\t900 birr\n\tMeeting\t\t700 birr\n\tGraduation\t\t500 birr"<<endl;
+       break;
+    }
+ case 4:
+    {
+        cout<<"\n\tTime Period\t\tPrice\n\tPer Month\t\t400 birr\n\tPer week\t\t250 birr\n\tPer day\t\t\t100 birr"<<endl;
+        break;
+    }
+
+
+
+   }
+   cout<<"If you want to get a reservation Enter 1 \nIf you want exit enter 0 "<<endl;
+   cin>>y;//data type integer
+   switch(y){
+   case 1:
+       {
+   name A,B; // strcut
+   fstream outfile;
+    outfile.open("Heaven_registration_info.txt",ios::out);
+    cout<<"\n\t\t\tWelcome to Registration Page";
+
+    cout<<"\n Please Enter your First  Name"<<endl;
+    cin>>A.b;
+    outfile<<A.b<<endl;
+    cout<<"\n Please Enter your Last Name"<<endl;
+    cin>>B.b;
+    outfile<<B.b<<endl;
+    cout<<"\n Please Enter your phone number"<<endl;
+    cin>>A.a;
+    outfile<<A.a<<endl;
+    cout<<"\n Thank you Mr or Ms "<<A.b<<" "<<B.b<<"\n You have successfully registered!"<<endl;
+
+    outfile.close();
+   }
+   case 0:
+    cout<<"\tTank you for Your Visit!!!"<<endl;
+
+   }
+}
+
+void grand()
+{
+       int x,y;
+   cout<<"welcome to Grand  Gato Hotel Home page"<<endl;
+   cout<<"please enter your choice service"<<endl;
+   cout<<"1.Food  "<<endl;
+   cout<<"2.Drink"<<endl;
+   cout<<"3.Game Zone"<<endl;
+   cout<<"4.Gym "<<endl;
+
+   cin>>x;
+   switch(x)
+   {
+ case 1:
+     {
+         cout<<"\t Food\t\t Price\n\tPizza\t\t120 birr\n\tBurger \t\t150 birr\n\tFruit punch\t60 birr\n\tSalad\t\t50 birr\n\tFinger fish\t80 birr"<<endl;
+         break;
+     }
+ case 2:
+    {
+        cout<<"\tDrink type\t\tPrice\n\tBeer\t\t\t30 birr\n\tSoft drink\t\t20 birr\n\tJuice\t\t\t40 birr"<<endl;
+        break;
+    }
+
+ case 3:
+    {
+        cout<<"\tService\tPrice\n\tVR\t\t100 birr\n\tTennis\t\t50 birr\n\tPool\t\t20 birr"<<endl;
+       break;
+    }
+ case 4:
+    {
+        cout<<"\n\tTime\t\t\tPrice\n\tPer Month\t\t400 birr\n\tPer week\t\t250 birr\n\tPer day\t\t\t100 birr"<<endl;
+        break;
+    }
+
+
+
+   }
+   cout<<"If you want to get a reservation Enter 1 \nIf you want exit enter 0 "<<endl;
+   cin>>y;//data type integer
+   switch(y){
+   case 1:
+       {
+   name A,B; // strcut
+   fstream outfile;
+    outfile.open("Grand_Gato_registration_info.txt",ios::out);
+    cout<<"\n\t\t\tWelcome to Registration Page";
+
+    cout<<"\n Please Enter your First  Name"<<endl;
+    cin>>A.b;
+    outfile<<A.b<<endl;
+    cout<<"\n Please Enter your Last Name"<<endl;
+    cin>>B.b;
+    outfile<<B.b<<endl;
+    cout<<"\n Please Enter your phone number"<<endl;
+    cin>>A.a;
+    outfile<<A.a<<endl;
+    cout<<"\n Thank you Mr or Ms "<<A.b<<" "<<B.b<<"\n You have successfully registered!"<<endl;
+
+    outfile.close();
+   }
+   case 0:
+    cout<<"\tTank you for Your Visit!!!"<<endl;
+
+   }
+}
